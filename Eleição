@@ -1,0 +1,82 @@
+package atividade;
+
+import java.util.Scanner;
+
+public class EleiçãoPresidencial {
+
+	public static void main(String[] args) {
+
+		// ------------------Declaração de Variáveis----------------------------------
+		int voto = 0;
+		float totalvoto = 0, cand1 = 0, cand2 = 0, cand3 = 0, cand4 = 0, votonulo = 0, votobranco = 0;
+
+		// ------------------Dados de Saída-------------------------------------------
+		System.out.println("-----ELEIÇÃO-----");
+		System.out.println("HENRIQUE (1)");
+		System.out.println("FERNANDO (2)");
+		System.out.println("ISABELA (3)");
+		System.out.println("IDANLEY (4)");
+		System.out.println("VOTO NULO (5)");
+		System.out.println("VOTO EM BRANCO (6)");
+		System.out.println("O programa será encerrado quando o número (0) for Digitado");
+		System.out.println();
+		Scanner ler = new Scanner(System.in);
+		
+		// ---------------Inicio da Repetição----------------------------------------------
+		do {
+
+			System.out.print("SEU VOTO: ");
+			voto = ler.nextInt();
+			
+			switch (voto) {
+
+			case 1:
+				cand1 += 1;
+				break;
+
+			case 2:
+				cand2 += 1;
+				break;
+
+			case 3:
+				cand3 += 1;
+				break;
+
+			case 4:
+				cand4 += 1;
+				break;
+
+			case 5:
+				votonulo += 1;
+				break;
+
+			case 6:
+				votobranco += 1;
+				break;
+			}
+
+			totalvoto += 1;
+			
+		} while (voto != 0);
+
+		// ----------Calculos-----------------------------------------------------------
+		cand1 = (cand1 / totalvoto) * 100;
+		cand2 = (cand2 / totalvoto) * 100;
+		cand3 = (cand3 / totalvoto) * 100;
+		cand4 = (cand4 / totalvoto) * 100;
+		votonulo = (votonulo / totalvoto) * 100;
+		votobranco = (votobranco / totalvoto) * 100;
+
+		// ---------------Saída Final de
+		// Dados----------------------------------------------
+
+		System.out.println("Porcentagem de vodos de HENRIQUE é de: " + cand1 + "%");
+		System.out.println("Porcentagem de vodos de FERNANDO é de: " + cand2 + "%");
+		System.out.println("Porcentagem de vodos de ISABELA é de: " + cand3 + "%");
+		System.out.println("Porcentagem de vodos de IDANLEY é de: " + cand4 + "%");
+		System.out.println("Porcentagem de vodos de NULO é de: " + votonulo + "%");
+		System.out.println("Porcentagem de vodos de EM BRANCO é de: " + votobranco + "%");
+		System.out.println("Total de votos: " + totalvoto);
+	}
+
+}
