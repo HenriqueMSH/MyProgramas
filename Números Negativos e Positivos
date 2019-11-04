@@ -1,0 +1,29 @@
+package atividade;
+
+import java.util.Scanner;
+
+public class Sla {
+	public static void main(String[] args) {
+
+		int num = 1, pos = 0, neg = 0;
+		
+		Scanner ler = new Scanner(System.in);
+		System.out.println("O PROGRAMA SERÁ ENCERRADO AO DIGITAR (0)"); 
+
+		while (num != 0) {
+			System.out.print("Informe um Número qualquer: ");
+			num = ler.nextInt();
+			if (num >= 0) {
+				pos += 1;
+			} else {
+				neg += 1;
+			}
+
+
+		}
+
+		System.out.println("Quantidade de números Positivos: " + pos);
+		System.out.println("Quantidade de números Negativos: " + neg);
+	}
+
+}
