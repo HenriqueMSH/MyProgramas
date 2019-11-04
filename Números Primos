@@ -1,0 +1,41 @@
+package atividade;
+
+import java.util.Scanner;
+
+public class NúmerosPrimos {
+
+	public static void main(String[] args) {
+
+		String SN;
+		int numPrimo, numDiv = 0;
+
+		System.out.println("Teste um número qualquer para saber se ele é Primo");
+		Scanner ler = new Scanner(System.in);
+
+		do {
+			numDiv = 0;
+			System.out.print("Digite o Número: ");
+			numPrimo = ler.nextInt();
+
+			for (int i = 1; i <= numPrimo; i++) {
+				if (numPrimo % i == 0) {
+					numDiv++;
+				}
+			}
+
+			if (numDiv == 2) {
+				System.out.println("O número é primo");
+			} else {
+				System.out.println("O número não é primo");
+			}
+
+			System.out.println();
+			System.out.print("Deseja testar outro Número ? sim(S) / não(N): ");
+			SN = ler.next();
+
+		} while (SN.equalsIgnoreCase("S"));
+
+		System.out.println("PROGRAMA ENCERRADO");
+	}
+
+}
