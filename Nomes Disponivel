@@ -1,0 +1,47 @@
+package atividade;
+
+import java.util.Scanner;
+
+public class NomeDisponivel {
+
+	public static void main(String[] args) {
+		
+		// Declaração do Vetor
+				String[] vect = new String[5];
+
+				// Classe Scanner
+				Scanner input = new Scanner(System.in);
+
+				// Declarar as Posições
+				for (int i = 0; i < vect.length; i++) {
+					System.out.print("Informe o " + (i + 1) + "º Nome: ");
+					vect[i] = input.nextLine();
+
+				}
+
+				// Escreve o as Posições
+				System.out.println();
+				System.out.print("Nomes: ");
+				for (int i = 0; i < vect.length; i++) {
+					System.out.print(vect[i]+"  ");
+
+				}
+				
+				//Comparação
+				System.out.println();
+				System.out.println();
+				System.out.print("Informe um novo nome: ");
+				String nome = input.nextLine();
+				for (int i = 0; i < vect.length; i++) {
+					if(nome.equalsIgnoreCase(vect[i])) {
+						System.out.println();
+						System.out.println("Esse nome não está disponível.");
+						
+						break;
+					}
+					
+				}
+		
+	}
+
+}
