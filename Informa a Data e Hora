@@ -1,0 +1,18 @@
+package atividade;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class Data {
+
+	public static void main(String[] args) {
+		
+		Date d = new Date();
+		System.out.println(d);
+		SimpleDateFormat simple1 = new SimpleDateFormat("dd/MM/yyyy");
+		SimpleDateFormat simple2 = new SimpleDateFormat("hh/mm/ss");
+		System.out.println("Data de Hoje: "+simple1.format(d)+"\nHora Atual: "+simple2.format(d));
+
+	}
+
+}
