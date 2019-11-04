@@ -1,0 +1,33 @@
+package atividade;
+
+import java.util.Scanner;
+
+public class ProdutosDeInformática {
+
+	public static void main(String[] args) {
+
+		String[] produto = new String[3];
+		double[] preco = new double[3];
+
+		int i;
+		Scanner ler = new Scanner(System.in);
+
+		for (i = 0; i < 3; i++) {
+			System.out.print("Informe o " + (i + 1) + "º Produto: ");
+			produto[i] = ler.nextLine();
+
+		}
+		System.out.println();
+		for (i = 0; i < 3; i++) {
+			System.out.print("Informe o preço do " + (i + 1) + "º Produto: ");
+			preco[i] = ler.nextDouble();
+
+		}
+		System.out.println();
+		for (i = 0; i < 3; i++) {
+			System.out.println(produto[i] + " custa R$: " + preco[i]);
+
+		}
+
+	}
+}
