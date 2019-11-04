@@ -1,0 +1,40 @@
+package atividade;
+
+import java.util.Scanner;
+
+public class SegundoQuesito {
+
+	public static void main(String[] args) {
+
+		int num = 1, homem = 0, mulher = 0;
+
+		System.out.println("Informe seu");
+		Scanner ler = new Scanner(System.in);
+		System.out.println();
+		
+		while (num != 0) {
+			System.out.print("Nome: ");
+			String nome = ler.nextLine();
+			ler.nextLine();
+			System.out.print("Idade: ");
+			 num = ler.nextInt();			
+			
+			System.out.print("sexo: Masculino(M) / Feminino(F): ");
+			String sexo = ler.next();
+			
+			System.out.println();
+//----------------Inicio das condiçôes-------------------------
+			if (sexo.equals("M")) {
+				homem += 1;
+			} else {
+				mulher += 1;
+			}
+//--------------------Fim-----------------------------------------
+
+		}
+
+		System.out.println("Números de Homens: "+homem);
+		System.out.println("Números de Mulheres: "+mulher);
+	}
+
+}
