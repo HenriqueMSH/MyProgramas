@@ -1,0 +1,28 @@
+package atividade;
+
+import java.util.Scanner;
+
+public class ValorPosterior {
+
+	public static void main(String[] args) {
+
+		// Declaração do Vetor
+		int[] vect = new int[10];
+
+		// Classe Scanner
+		Scanner input = new Scanner(System.in);
+
+		// Declarar as Posições
+		for (int i = 0; i < vect.length; i++) {
+			System.out.print("Informe o " + (i + 1) + "º Valor: ");
+			vect[i] = input.nextInt();
+
+		}
+
+		// Escreve o as Posições
+		System.out.println();
+		System.out.print("Valores: ");
+		for (int i = 0; i < vect.length; i++) {
+			System.out.print(+vect[i]+"  ");
+
+		}
