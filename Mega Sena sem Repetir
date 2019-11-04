@@ -28,7 +28,7 @@ public class CaixaEconomicaFederal {
 		int i = 0;
 		boolean presente = false;
 		while (i < num.length) {
-			valor = sorteio.nextInt(5);
+			valor = sorteio.nextInt(60);
 			
 			cont = 0;
 			presente = false;
