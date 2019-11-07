@@ -1,0 +1,63 @@
+package atividade;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Estoque {
+
+	Produto produto;
+
+	public Produto getProduto() {
+		return produto;
+	}
+
+	public void setProduto(Produto produto) {
+		this.produto = produto;
+	}
+
+	public void cadastrarProduto() {
+		String nome;
+		float preco;
+		int qtdProduto;
+
+		Scanner teclado = new Scanner(System.in);
+
+		Produto produto = new Produto();
+
+		System.out.print("Digite o nome do Produto :");
+		nome = teclado.nextLine();
+
+		System.out.print("Digite o preço do Produto :");
+		preco = teclado.nextFloat();
+
+		System.out.print("Digite a quatidade que deverá ser cadastrada :");
+		qtdProduto = teclado.nextInt();
+
+		ArrayList<String> armazenaNome = new ArrayList();
+		armazenaNome.add(nome);
+
+		ArrayList<Float> armazenaPreco = new ArrayList();
+		armazenaPreco.add(preco);
+
+		ArrayList<Integer> armazenaQtd = new ArrayList();
+		armazenaQtd.add(qtdProduto);
+
+		mostrarProduto(armazenaNome, armazenaPreco, armazenaQtd);
+	}
+
+	public void mostrarProduto(ArrayList<String> armazenaNome, ArrayList<Float> armazenaPreco, ArrayList<Integer> armazenaQtd) {
+
+		for (String nomes : armazenaNome) {
+			System.out.println(nomes);
+		}
+
+		for (Float precos : armazenaPreco) {
+			System.out.println(precos);
+		}
+
+		for (Integer quantidade : armazenaQtd) {
+			System.out.println(quantidade);
+		}
+
+	}
+}
