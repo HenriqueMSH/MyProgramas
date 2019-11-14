@@ -1,0 +1,55 @@
+
+import java.util.Scanner;
+import javax.swing.JOptionPane;
+
+public class SistemaLogin {
+	public static void main(String[] args) {
+		String nomeAluno, idade, num1, num2, qtdFalta, tn, confirm,qtdNotas;
+		double nota1, nota2, media,qtdMedia,soma=0;
+		int Faltas;
+		
+		JOptionPane.showMessageDialog(null, "Por favor informe: ", "<<<Programa Escolar>>>", JOptionPane.PLAIN_MESSAGE);
+		
+		do {
+		nomeAluno = JOptionPane.showInputDialog("Seu nome: ");
+		idade = JOptionPane.showInputDialog("Sua Idade: ");
+		qtdNotas = JOptionPane.showInputDialog("Informe a quantidade de notas necessarias para compor a média do aluno: ");
+		qtdMedia = Double.parseDouble(qtdNotas);
+		
+		
+		
+		for(int i=0; i < qtdMedia;i++) {
+		num1 = JOptionPane.showInputDialog("Nota da "+(i+1)+"º prova: ");
+		nota1 = Double.parseDouble(num1);
+		soma = soma + nota1;
+		
+		}
+		
+		qtdFalta = JOptionPane.showInputDialog("Quantidade de faltas: ");
+		tn = JOptionPane.showInputDialog("O aluno trabalha a noite ? S (SIM) / N (NÃO)");
+
+		//calculo da média
+		media = soma / qtdMedia;
+
+		Faltas = Integer.parseInt(qtdFalta);
+		
+		JOptionPane.showMessageDialog(null, "Oi " + nomeAluno + ", sua média foi: " + media, "Média: ",	JOptionPane.PLAIN_MESSAGE);
+
+		if ((media >= 7 && tn.equalsIgnoreCase("S") || Faltas < 3) || (media >= 9)) {
+			JOptionPane.showMessageDialog(null, "APROVADO", "Condição do Aluno", JOptionPane.PLAIN_MESSAGE);
+		} else if (media < 4) {
+			JOptionPane.showMessageDialog(null, "REPROVADO", "Condição do Aluno", JOptionPane.PLAIN_MESSAGE);
+		} else if (Faltas < 10) {
+			JOptionPane.showMessageDialog(null, "RECUPERAÇÃO", "Condição do Aluno", JOptionPane.PLAIN_MESSAGE);
+		} else {
+			JOptionPane.showMessageDialog(null, "REPROVADO", "Condição do Aluno", JOptionPane.PLAIN_MESSAGE);
+		}
+	
+		confirm = JOptionPane.showInputDialog("Deseja cadastrar um novo Aluno ? S (SIM) / N (NÃO)");
+		
+		soma=0;
+		media=0;
+		
+		}while(confirm.equalsIgnoreCase("S"));
+		}
+}
